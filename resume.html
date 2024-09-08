@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Resume Builder</title>
+<!-- style sheet -->
+ <link rel="stylesheet" href="./src/CSS/form.css">
+    <link rel="stylesheet" href="./src/CSS/resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<!-- Form for user input -->
+<div class="form-wrapper">
+    <h2>Enter Your Details</h2>
+    <form id="resume-form">
+        <div>
+            <label for="profile-picture">Profile Picture:</label>
+            <input type="file" id="profile-picture" accept="image/*">
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+        </div>
+        <div>
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" placeholder="Your Profession">
+        </div>
+        <div>
+            <label for="about">About Me:</label>
+            <textarea id="about" placeholder="A brief bio..."></textarea>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" placeholder="Your Phone Number">
+        </div>
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Your Location">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email">
+        </div>
+        <div>
+            <label for="facebook">Facebook:</label>
+            <input type="url" id="facebook" placeholder="Facebook Profile URL">
+        </div>
+        <div>
+            <label for="github">GitHub:</label>
+            <input type="url" id="github" placeholder="GitHub Profile URL">
+        </div>
+        <div>
+            <label for="codepen">CodePen:</label>
+            <input type="url" id="codepen" placeholder="CodePen Profile URL">
+        </div>
+        <div>
+            <label for="medium">Medium:</label>
+            <input type="url" id="medium" placeholder="Medium Profile URL">
+        </div>
+        <!-- Add these sections in the form-wrapper -->
+<div>
+    <label for="education">Education:</label>
+    <textarea id="education" placeholder="Enter your education details..."></textarea>
+</div>
+<div>
+    <label for="experience">Work Experience:</label>
+    <textarea id="experience" placeholder="Enter your work experience..."></textarea>
+</div>
+<div>
+    <label for="skills">Skills:</label>
+    <textarea id="skills" placeholder="Enter your skills..."></textarea>
+</div>
+
+        <button type="button" id="generate-resume">Generate Resume</button>
+    </form>
+    
+</div>
+<!-- Form complete here  -->
+<br> <br>
+
+<!-- Resume -->
+<div class="wrapper">
+    <!-- Personal Information -->
+    <div class="intro">
+        <div class="profile">
+            <div class="photo">
+                <img id="display-profile-picture" src="./src/images/resume_one.png">
+            </div>
+            <div class="bio">
+                <h1 class="name" id="display-name">Umama Masroor</h1>
+                <p class="profession" id="display-profession">Front-end Developer</p>
+            </div>
+        </div>
+        <div class="intro-section about">
+            <h1 class="title">About me</h1>
+            <p class="paragraph" id="display-about">
+                Hi everyone, I am a Web Frontend Developer. I recently try my best to improve my skills on web front-end. My favorite thing is to observe others' portfolio.
+            </p>
+        </div>
+        <br>
+        <div class="intro-section contact">
+            <h1 class="title">Contact</h1>
+            <div class="info-section">
+                <i class="fas fa-phone"></i>
+                <span id="display-phone">(+886)888-888-888</span>
+            </div>
+            <div class="info-section">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="display-location">Pakistan, Lahore</span>
+            </div>
+            <div class="info-section">
+                <i class="fas fa-paper-plane"></i>
+                <span id="display-email">demo@gmail.com</span>
+            </div>
+            <div class="info-section link">
+                <i class="fab fa-facebook"></i>
+                <a id="display-facebook" target="_blank" href="https://www.facebook.com/">
+                    <span>Facebook Profile</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="intro-section follow">
+            <h1 class="title">Follow</h1>
+            <div class="info-section link">
+                <i class="fab fa-github"></i>
+                <a id="display-github" target="_blank" href="https://github.com/">
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <div class="info-section link">
+                <i class="fab fa-codepen"></i>
+                <a id="display-codepen" target="_blank" href="https://codepen.io/">
+                    <span>Codepen.io</span>
+                </a>
+            </div>
+            <div class="info-section link">
+                <i class="fab fa-medium"></i>
+                <a id="display-medium" target="_blank" href="https://medium.com/">
+                    <span>Medium</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Education -->
+    <div class="detail">
+        <div class="detail-section edu">
+            <div class="detail-title">
+                <div class="title-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <span>Education</span>
+            </div>
+            <div class="detail-content">
+                <div class="timeline-block">
+                    <h1>Department of Computer Science </h1>
+                    <p>National Tsing Hua University, Lahore</p>
+                    <time>2015 - 2019</time>
+                </div>
+                <div class="timeline-block">
+                    <h1>Institute of Computer Science and Engineering</h1>
+                    <p>National Chiao Tung University, Islamabad</p>
+                    <time>2020 - present</time>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="detail-section pg-skill">
+            <div class="detail-title">
+                <div class="title-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <span>Skills</span>
+            </div>
+            <div class="detail-content">
+                <ul class="pg-list">
+                    <li>
+                        <span>HTML5</span>
+                        
+                    </li>
+                    <li>
+                        <span>CSS3</span>
+                        
+                    </li>
+                    <li>
+                        <span>Javascript</span>
+                        
+                    </li>
+                    <li>
+                        <span>JQuery</span>
+                        
+                    </li>
+                    <li>
+                        <span>NodeJS</span>
+                        
+                    </li>
+                    <li>
+                        <span>ReactJS</span>
+                    </li>
+                    <li>
+                        <span>VueJS</span>
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="detail-section edu">
+            <div class="detail-work">
+                <div class="title-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <span>Work Experience</span>
+            </div>
+            <div class="detail-content">
+                <div class="timeline-block">
+                    <h1>Demo Company </h1>
+                    <p>National Tsing Hua University, Lahore</p>
+                    <time>2015 - 2019</time>
+                </div>
+                <div class="timeline-block">
+                    <h1>Institute of Computer Science </h1>
+                    <p>National Chiao Tung University, Islamabad</p>
+                    <time>2020 - present</time>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./src/TS/resume.js"></script>
+</body>
+</html>
